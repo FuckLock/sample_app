@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
   resources :users
+  
+  #这是登陆页面的路由，而且这个给这个路由设置了一些REST动作，
+  #一般登陆页面有新建一个用户，那么就会点击new这个动作来创建，
+  #在通过create这个动作向数据库中创建数据。
+  resources :sessions, only: [:new, :create, :destroy]
 
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy', via: :delete
 
   root to: 'static_pages#home'
-  get '/signup', to: 'users#new'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
