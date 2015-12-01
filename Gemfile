@@ -2,6 +2,9 @@ source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'faker', '1.0.1'
 gem 'rails', '4.2.4'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bcrypt-ruby', '3.1.2'

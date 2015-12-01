@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #一般登陆页面有新建一个用户，那么就会点击new这个动作来创建，
   #在通过create这个动作向数据库中创建数据。
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
 
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
+  get '/static_pages/home', to: 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
