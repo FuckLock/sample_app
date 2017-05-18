@@ -36,8 +36,8 @@ class User < ActiveRecord::Base
 	end
 
 	def feed
-Micropost.from_users_followed_by(self)
-end
+		Micropost.from_users_followed_by(self)
+	end
 
 	private
 		def create_remember_token

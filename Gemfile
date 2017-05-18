@@ -1,4 +1,4 @@
-source 'https://ruby.taobao.org'
+source 'https://gems.ruby-china.org/'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,8 +40,12 @@ gem 'minitest'
 
 
 group :development, :test do
-gem 'sqlite3', '1.3.11'
-gem 'rspec-rails', '3.3.3'
+	gem 'sqlite3', '1.3.11'
+	gem 'rspec-rails', '3.3.3'
+end
+
+group :production do
+	gem 'pg'
 end
 
 group :test do
