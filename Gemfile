@@ -36,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'minitest'
+# gem 'minitest'
 
 
 group :development, :test do
@@ -49,8 +49,8 @@ group :production do
 end
 
 group :test do
-gem 'capybara', '2.5.0'
-gem 'factory_girl_rails', '4.5.0'
+	gem 'capybara', '2.5.0'
+	gem 'factory_girl_rails', '4.5.0'
 end
 
 group :development do
